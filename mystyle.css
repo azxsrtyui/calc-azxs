@@ -1,0 +1,50 @@
+table.calc {
+    background-color: #EEEEEE;
+    width: 600px;
+    height: 800px;
+    text-align: center;
+  }
+  table.calc td, table.calc th {
+    border: 1px solid #AAAAAA;
+    width: 150px;
+    height: 160x;
+  }
+  table.calc tbody td {
+    font-size: 13px;
+  }
+  table.calc tfoot td {
+    font-size: 14px;
+  }
+  table.calc tfoot .links {
+    text-align: right;
+  }
+  table.calc tfoot .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
+  .button {
+    background-color: #4CAF50;
+    width: 100px;
+    height: 100px;
+    border: none;
+    color: black;
+    padding: 20px 20px;
+    text-align: center justify;
+    font-size: 40px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .button:hover {
+    background-color: green;
+  }
+  input {
+      width: 400px;
+      height: 100px;
+      font-size: 60px;
+      font-family: 'Press Start 2P', cursive;
+      text-align: right;
+  }
