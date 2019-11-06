@@ -15,7 +15,7 @@
         <tbody>
         <tr>
         <td><button class="button" onclick='displayScreen.value = "";' style= "font-size:24px;">Clr</button></td>
-        <td colspan="3"><input type="text" id="displayScreen"/></td> 
+        <td colspan="3"><input type="text" id="displayScreen" readonly="readonly"/></td> 
 
         </tr>
         <tr>
@@ -54,7 +54,7 @@
           function solve() { 
              let x = document.getElementById("displayScreen").value 
              let y = eval(x) 
-             document.getElementById("displayScreen").value = y 
+             document.getElementById("displayScreen").value = y
          } 
         </script>
   </body>
