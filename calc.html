@@ -14,7 +14,7 @@
     <table class="calc">
         <tbody>
         <tr>
-        <td><button class="button" style="font-size: 24px;">Del</button></td>
+        <td><button class="button" onclick='displayScreen.value = "";' style= "font-size:24px;">Clr</button></td>
         <td colspan="3"><input type="text" id="displayScreen"/></td> 
 
         </tr>
@@ -22,25 +22,25 @@
         <td><button onclick="addNumberToDisplay('7')" class="button">7</button></td>
         <td><button onclick="addNumberToDisplay('8')" class="button">8</button></td>
         <td><button onclick="addNumberToDisplay('9')" class="button">9</button></td>
-        <td><button onclick="" class="button">+</button></td>
+        <td><button onclick="addNumberToDisplay('+')" class="button">+</button></td>
         </tr>
         <tr>
         <td><button onclick="addNumberToDisplay('4')" class="button">4</button></td>
         <td><button onclick="addNumberToDisplay('5')" class="button">5</button></td>
         <td><button onclick="addNumberToDisplay('6')" class="button">6</button></td>
-        <td><button onclick="" class="button">-</button></td>
+        <td><button onclick="addNumberToDisplay('-')" class="button">-</button></td>
         </tr>
         <tr>
         <td><button onclick="addNumberToDisplay('1')" class="button">1</button></td>
         <td><button onclick="addNumberToDisplay('2')" class="button">2</button></td>
         <td><button onclick="addNumberToDisplay('3')" class="button">3</button></td>
-        <td><button onclick="" class="button">÷</button></td>
+        <td><button onclick="addNumberToDisplay('/')" class="button">÷</button></td>
         </tr>
         <tr>
         <td><button onclick="addNumberToDisplay('0')" class="button">0</button></td>
-        <td><button onclick="" class="button">.</button></td>
-        <td><button onclick="" class="button">=</button></td>
-        <td><button onclick="" class="button">×</button></td>
+        <td><button onclick="addNumberToDisplay('.')" class="button">.</button></td>
+        <td><button onclick="solve()" class="button">=</button></td>
+        <td><button onclick="addNumberToDisplay('*')" class="button">×</button></td>
         </tr>
         </tbody>
         </table>
@@ -51,6 +51,11 @@
             var displayScreenValue = displayScreen.value;
             displayScreen.value = displayScreenValue + number;
           }
+          function solve() { 
+             let x = document.getElementById("displayScreen").value 
+             let y = eval(x) 
+             document.getElementById("displayScreen").value = y 
+         } 
         </script>
   </body>
 </html>
