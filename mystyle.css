@@ -3,6 +3,7 @@ table.calc {
     width: 600px;
     height: 800px;
     text-align: center;
+    padding: 50px;
   }
   table.calc td, table.calc th {
     border: 1px solid #AAAAAA;
@@ -47,4 +48,55 @@ table.calc {
       font-size: 60px;
       font-family: 'Press Start 2P', cursive;
       text-align: right;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  .jumbotron {
+    background: rgba(0,0,0,0);
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 
+  html {
+    height: 150%;
+}
+  body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,142,171,1) 100%);
+  }
+  h1 {
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    padding: 50px;
+  }
+  p {
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    padding: 25px;
   }

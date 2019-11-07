@@ -5,24 +5,42 @@
     <meta charset="utf-8">
     <title>Calculator Test</title>
     <meta name="description" content="Roughly 155 characters">
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <link rel="stylesheet" type="text/css" href="mystyle.css">
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Content --> 
-    <script>
-      var displayScreen = document.getElementById('displayScreen');
-        function addNumberToDisplay(number) {
-  // Function Implementation...
-  displayScreen.value = number;
-}
-        </script>
-    <table class="calc">
+    <div>
+
+      </div class="container-fluid">
+      <nav class="navbar navbar-light bg-light">
+              <a class="navbar-brand" href="index.html">Sebs Lit Site</a>
+            </nav>
+      <div class="jumbotron">
+          <h1 align="center">Homepage</h1>
+      </div>
+      <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link" href="calc.html">Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="article.html">Article</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </br>
+    </br>
+    <table class="calc" align="center">
         <tbody>
         <tr>
         <td><button class="button" style="font-size: 24px;">Del</button></td>
-        <td colspan="3"><input type="text" id="result" ;/></td> 
+        <td colspan="3"><input type="text" id="displayScreen" readonly="readonly";/></td> 
 
         </tr>
         <tr>
@@ -46,10 +64,23 @@
         <tr>
         <td><button onclick="addNumberToDisplay('0')" class="button">0</button></td>
         <td><button onclick="addNumberToDisplay('.')" class="button">.</button></td>
-        <td><button onclick="addNumberToDisplay('=')" class="button">=</button></td>
+        <td><button onclick="solve()" class="button">=</button></td>
         <td><button onclick="addNumberToDisplay('×')" class="button">×</button></td>
         </tr>
         </tbody>
         </table>
+        <script>
+            var displayScreen = document.getElementById('displayScreen');
+            function addNumberToDisplay(number) {
+    // Function Implementation...
+              var displayScreenValue = displayScreen.value;
+              displayScreen.value = displayScreenValue + number;
+            }
+            function solve() { 
+               let x = document.getElementById("displayScreen").value 
+               let y = eval(x) 
+               document.getElementById("displayScreen").value = y
+           } 
+          </script>
   </body>
 </html>
